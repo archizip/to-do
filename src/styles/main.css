@@ -1,0 +1,70 @@
+html,
+body,
+#app,
+.App {
+  width: 100%;
+  height: 100%;
+}
+.App {
+  padding: 0 50px;
+  height: 100%;
+}
+.calendar {
+  height: 100%;
+  position: relative;
+  padding-top: 50px;
+}
+.calendar > .title {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.calendar .columns {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  height: 100%;
+}
+.calendar .columns .day-column {
+  min-width: 25%;
+  border-right: 1px solid #eeeeee;
+  position: relative;
+  padding: 10px;
+}
+.calendar .columns .day-column:hover {
+  cursor: pointer;
+}
+.calendar .columns .day-column:hover .click-to-add {
+  display: block;
+}
+.calendar .columns .day-column .click-to-add {
+  width: 100%;
+  height: 100%;
+  background: #e6f7ff;
+  position: absolute;
+  display: none;
+}
+.calendar .columns .day-column .title {
+  margin-bottom: 10px;
+}
+.calendar .columns .day-column .title h2 {
+  display: inline-block;
+}
+.calendar .columns .day-column .title button {
+  float: right;
+}
+.calendar .columns .day-column .list-wrapper .item {
+  border-bottom: 1px solid #eee;
+}
+.calendar .columns .day-column .list-wrapper .item .ant-checkbox-wrapper {
+  vertical-align: top;
+  margin-top: 5px;
+}
+.calendar .columns .day-column .list-wrapper .item .item-title {
+  margin-left: 10px;
+  display: inline-block;
+  font-size: 11px;
+}
+.calendar .columns .day-column .list-wrapper .item .item-title h2 {
+  margin: 0;
+}

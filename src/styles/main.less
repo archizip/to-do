@@ -1,0 +1,71 @@
+html, body, #app, .App {
+  width: 100%;
+  height: 100%;
+}
+
+.App {
+  padding: 0 50px;
+  height: 100%;
+}
+
+.calendar {
+  height: 100%;
+  position: relative;
+  padding-top: 50px;
+  > .title {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .columns {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    height: 100%;
+    .day-column {
+      min-width: 25%;
+      border-right: 1px solid #eeeeee;
+      position: relative;
+      padding: 10px;
+      &:hover {
+        cursor: pointer;
+        .click-to-add {
+          display: block;
+        }
+      }
+      .click-to-add {
+        width: 100%;
+        height: 100%;
+        background: #e6f7ff;
+        position: absolute;
+        display: none;
+      }
+      .title {
+        margin-bottom: 10px;
+        h2 {
+          display: inline-block;
+        }
+        button {
+          float: right;
+        }
+      }
+      .list-wrapper {
+        .item {
+          border-bottom: 1px solid #eee;
+          .ant-checkbox-wrapper {
+            vertical-align: top;
+            margin-top: 5px;
+          }
+          .item-title {
+            margin-left: 10px;
+            display: inline-block;
+            font-size: 11px;
+            h2 {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
